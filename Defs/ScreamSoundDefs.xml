@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <SoundDef>
+    <defName>TD_Scream</defName>  
+		<maxVoices>1</maxVoices>
+    <subSounds>
+      <li>
+				<onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>TDScreams</clipFolderPath>
+          </li>
+        </grains>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>
