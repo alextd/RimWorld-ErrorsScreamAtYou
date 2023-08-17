@@ -33,19 +33,19 @@ namespace ErrorsScreamAtYou
 		}
 
 		private static string _text;
-		private static int _tick;
+		private static int _frame;
 		public static bool needsErrorScream;
 		public static void Postfix(string text)
 		{
 			try
 			{
 				// catch recursive errors
-				if (text == _text && (Current.Game?.tickManager?.TicksAbs ?? _tick) == _tick)
+				if (text == _text && Time.renderedFrameCount == _frame)
 				{
 					Log.Message($"TD_Scream skipping Error {text}");
 					return;
 				}
-				_tick = Current.Game?.tickManager?.TicksAbs ?? 0;
+				_frame = Time.renderedFrameCount;
 				_text = text;
 
 

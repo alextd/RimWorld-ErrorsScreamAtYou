@@ -3,7 +3,7 @@
   
   <SoundDef>
     <defName>TD_Scream</defName>  
-		<maxVoices>1</maxVoices>
+		<maxVoices>3</maxVoices>
     <subSounds>
       <li>
 				<onCamera>True</onCamera>
